@@ -532,14 +532,24 @@ def load_pathway_data():
         dplas_avg["avg_pBH"] = dplas_avg["avg_pBH"].replace(0, np.nextafter(0, 1))
         dplas_avg["lpBH"] = -np.log10(dplas_avg["avg_pBH"])
         dplas_avg["cor"] = np.where(dplas_avg["avg_log2fc"] > 0, 1, -1)
-        
-        lipid_pathways = [
+    
+               lipid_pathways = [
             "Fatty.acid Oxidation and Synthesis",
             "Ceramide-glycosylceramides Metabolism",
             "Sphingolipid Metabolism",
             "Glycerolipids Metabolism",
             "Glycerophospholipids Metabolism",
+            "Glycerolipids Metabolism (TAG-PUSFAs)",
+            "Glycerolipids Metabolism (DAG)",
+            "Glycerolipids Metabolism (TAG-MUSFAs)",
+            "Glycerolipids Metabolism (TAG-PUSFAs)",
+            "Glycerolipids Metabolism (TAG-SAFs)",
+            "Glycerophospholipids Metabolism (LPC)",
+            "Glycerophospholipids Metabolism (LPE)",
+            "Glycerophospholipids Metabolism (PC)",
+            "Glycerophospholipids Metabolism (PE)"
         ]
+    
         amino_pathways = [
             "1-Carbon, Folate, Formate, Glycine, Serine Metabolism",
             "Amino acid Metabolism",
